@@ -25,6 +25,7 @@ if (missingEnvVars.length > 0) {
 console.log('✅ All required environment variables are configured');
 
 const nextConfig = {
+  output: 'standalone',
   reactStrictMode: true,
   transpilePackages: ['@repo/ui', '@repo/commands', '@repo/config'],
   
