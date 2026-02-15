@@ -1,0 +1,39 @@
+------------------------------------------------
+[Sun Feb  1 02:55:00 PM CET 2026] 🚨 RESCUE PROTOCOL INITIATED 🚨
+Found backup file. Restoring...
+Restarting Clawdbot Gateway...
+Restarted systemd service: clawdbot-gateway.service
+✅ Gateway restart command issued.
+Self-disarmed: Cron job removed.
+------------------------------------------------
+[Sun Feb  1 06:35:00 PM CET 2026] 🚨 RESCUE PROTOCOL INITIATED 🚨
+Found backup file. Restoring...
+Restarting Clawdbot Gateway...
+Invalid config at /home/duper/.clawdbot/clawdbot.json:\n- meta: Unrecognized key: "configVersion"
+│
+◇  Config ───────────────────────────────────────────────────╮
+│                                                            │
+│  Config invalid; doctor will run with best-effort config.  │
+│                                                            │
+├────────────────────────────────────────────────────────────╯
+│
+◇  Unknown config keys ──╮
+│                        │
+│  - meta.configVersion  │
+│                        │
+├────────────────────────╯
+│
+◇  Doctor ────────────────────────────────────────────╮
+│                                                     │
+│  Run "clawdbot doctor --fix" to remove these keys.  │
+│                                                     │
+├─────────────────────────────────────────────────────╯
+Config invalid
+File: ~/.clawdbot/clawdbot.json
+Problem:
+  - meta: Unrecognized key: "configVersion"
+
+Run: clawdbot doctor --fix
+Restarted systemd service: clawdbot-gateway.service
+✅ Gateway restart command issued.
+Self-disarmed: Cron job removed.
