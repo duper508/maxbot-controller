@@ -1,8 +1,19 @@
 {
   "version": 2,
-  "framework": "nextjs",
-  "buildCommand": "npm install && npm run build",
-  "outputDirectory": "apps/web/.next",
-  "installCommand": "npm install --legacy-peer-deps",
-  "regions": ["iad1"]
+  "builds": [
+    {
+      "src": "apps/web/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/.*",
+      "dest": "apps/web/pages/api"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "apps/web/$1"
+    }
+  ]
 }
