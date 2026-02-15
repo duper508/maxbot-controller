@@ -1,24 +1,17 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "apps/web/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "apps/web/src/pages/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "apps/web"
-    }
-  ],
+  "framework": "nextjs",
+  "buildCommand": "cd apps/web && npm install && npm run build",
+  "outputDirectory": "apps/web/.next",
+  "installCommand": "npm install",
   "env": {
-    "NEXT_PUBLIC_DISCORD_WEBHOOK_BASE": "@discord_webhook_base"
-  },
-  "buildCommand": "npm run build -- --filter=maxbot-controller-web",
-  "outputDirectory": "apps/web/.next"
+    "GITHUB_ID": "@github_id",
+    "GITHUB_SECRET": "@github_secret",
+    "GITHUB_PAT": "@github_pat",
+    "NEXTAUTH_SECRET": "@nextauth_secret",
+    "NEXTAUTH_URL": "@nextauth_url",
+    "DISCORD_CHANNEL_ID": "@discord_channel_id",
+    "DISCORD_WEBHOOK_URL": "@discord_webhook_url",
+    "DISCORD_BOT_TOKEN": "@discord_bot_token"
+  }
 }
