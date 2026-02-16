@@ -2,5 +2,5 @@
   "version": 2,
   "framework": null,
   "buildCommand": "cd apps/web && npm install && npm run build",
-  "outputDirectory": "apps/web/.next"
+  "outputDirectory": "apps/web/public"
 }
